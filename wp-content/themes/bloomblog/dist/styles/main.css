@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+  }
+  
+   body {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    background-color: floralwhite;
+    margin: 0;
+    padding: 16px;
+   }
+  
+   .content-blocks h1 {
+    font-size: 2rem;
+    font-weight: 700;
+   }
+   h1 {
+    font-size: 2rem;
+    font-weight: 700;
+   }
+  
+   .content-blocks h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+   }
+
+   h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+   }
+
+   .content-blocks h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+   }
+
+   h3 {
+    font-size: 1.375rem;
+    font-weight: 600;
+   }
+
+   .content-blocks h4 {
+    font-size: 1.375rem;
+    font-weight: 600;
+   }
+
+   h4 {
+    font-size: 1.375rem;
+    font-weight: 600;
+   }
+
+   .content-blocks h5 {
+    font-size: 1rem;
+    font-weight: 600;
+   }
+
+   .content-blocks p {
+    font-size: 1rem;
+    font-weight: 400;
+   }
+
+   img.custom-logo {
+    height: 24px;
+    width: auto;
+   }
+
+   .logo {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    column-gap: 4px;
+   }
+
+   nav {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 72px;
+    justify-content: space-between;
+   }
+
+   #menu-primary {
+    background-color: red;
+   }
+
+   #menu-primary li {
+    float: right;
+    font-size: 1rem;
+   }
+
+   #menu-primary li.menu-item a {
+    display: block;
+    padding-left: 1rem;
+   }
+
+   #menu-primary li.menu-item a:not(:hover) {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+   }
+
+   #menu-primary li.menu-item a:hover {
+    color: goldenrod;
+    font-weight: bold;
+    text-decoration: underline;
+   }
+
+   #menu-primary li.menu-item a:active {
+    color: goldenrod;
+    font-weight: bold;
+    text-decoration: none;
+   }
+
+   footer #menu-primary li.menu-item a {
+    color: red;
+   }
+
+   @media screen and (min-width: 720px) {
+    #menu-primary li.menu-item a {
+        padding-left: 4rem;
+    }
+    body {
+        margin: 24px;
+    }
+   }
