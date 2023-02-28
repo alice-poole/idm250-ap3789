@@ -19,11 +19,7 @@
   <nav>
     <div class="logo">
     <a href="<?php home_url();?>">
-        <?php the_custom_logo();?> 
-        <h3>
-            Feybloom
-            <?php get_bloginfo( 'name' ); ?>
-        </h3>
+        <?php the_custom_logo();?>
         
     </a>
     </div>

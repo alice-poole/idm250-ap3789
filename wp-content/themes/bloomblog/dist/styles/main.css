@@ -63,6 +63,7 @@
    }
 
    h1 {
+    justify-self: left;
     font-size: 7.625rem;
     font-weight: 300;
     letter-spacing: -0.094rem;
@@ -111,12 +112,12 @@
     text-align: left;
    }
 
-   p:first-of-type {
+   p:nth-child(1) {
     margin-bottom: 32px;
     text-indent: none;
    }
 
-   p:first-of-type:first-letter {
+   p:nth-child(1):first-letter {
     initial-letter: 2;
     letter-spacing: 0.031rem;
     text-transform: uppercase;
