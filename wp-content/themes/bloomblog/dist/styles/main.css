@@ -52,12 +52,14 @@
 
    blockquote {
     border: none;
+    padding: none;
     text-decoration: none;
    }
 
    blockquote:first-child:first-letter {
-    initial-letter: 2;
     color: var(--color);
+    initial-letter: 2;
+    letter-spacing: 0.031rem;
     text-transform: uppercase;  
    }
 
@@ -157,7 +159,7 @@
 
    a {
     color: var(--color);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
    }
 
@@ -165,7 +167,7 @@
     text-decoration: underline;
    }
 
-   figure.img {
+   figure > img {
     border: 2px solid var(--text);
     border-radius: 12px;
     width: 100%;
@@ -218,19 +220,19 @@
 
    #menu-primary li.menu-item a:not(:hover) {
     color: var(--text);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
    }
 
    #menu-primary li.menu-item a:hover {
     color: var(--color);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: underline;
    }
 
    #menu-primary li.menu-item a:active {
     color: var(--color);
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
    }
 
