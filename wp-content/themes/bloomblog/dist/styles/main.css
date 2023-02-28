@@ -3,15 +3,18 @@
   }
 
 :root {
-    background-color: floralwhite;
+    --background: FloralWhite;
+    --text: Black;
+    --color: GoldenRod;
+    background-color: var(--background);
     font-family: 'Crimson Pro', serif;
     line-height: 1.5;
 }
   
    body {
     align-items: center;
-    color: black;
-    background-color: floralwhite;
+    color: var(--text);
+    background-color: var(--background);
     display: flex;
     flex-flow: column nowrap;
     margin: 16px;
@@ -47,9 +50,13 @@
     /**/
    }
 
-   .content-blocks pullquote {
-    /**/
-    color: red;
+   blockquote {
+    text-decoration: none;
+   }
+
+   blockquote:first-child:first-letter {
+    initial-letter: 2;
+    color: var(--color);
    }
 
    h1 {
@@ -101,6 +108,14 @@
     text-align: left;
    }
 
+   strong {
+    font-weight: 700;
+   }
+
+   em {
+    font-style: italic;
+   }
+
    .button {
     font-size: 1.125rem;
     font-weight: 500;
@@ -129,6 +144,28 @@
     letter-spacing: 0.031rem;
    }
 
+   a {
+    color: var(--color);
+    font-weight: 600;
+    text-decoration: none;
+   }
+
+   .underline {
+    text-decoration: underline;
+   }
+
+   figure {
+    border: 2px solid var(--text);
+    border-radius: 12px;
+    width: 100%;
+   }
+   figcaption {
+    font-size: 0.938rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    text-align: center;
+   }
+
    img.custom-logo {
     height: 24px;
     width: auto;
@@ -142,7 +179,7 @@
    }
 
    .logo a, .logo a:active, .logo a:after {
-    color: black;
+    color: var(--text);
     text-decoration: none;
    }
 
@@ -169,20 +206,20 @@
    }
 
    #menu-primary li.menu-item a:not(:hover) {
-    color: black;
-    font-weight: bold;
+    color: var(--text);
+    font-weight: 600;
     text-decoration: none;
    }
 
    #menu-primary li.menu-item a:hover {
-    color: goldenrod;
-    font-weight: bold;
+    color: var(--color);
+    font-weight: 600;
     text-decoration: underline;
    }
 
    #menu-primary li.menu-item a:active {
-    color: goldenrod;
-    font-weight: bold;
+    color: var(--color);
+    font-weight: 600;
     text-decoration: none;
    }
 
@@ -200,9 +237,6 @@
    }
 
    @media screen and (min-width: 905px) {
-    #menu-primary li.menu-item a {
-        padding-left: 4rem;
-    }
     body {
         margin: auto;
         width: 840px;
