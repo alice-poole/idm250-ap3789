@@ -52,11 +52,7 @@
 
    blockquote {
     border: none;
-    font-style: italic;
-    margin-bottom: none;
-    margin-top: none;
     text-decoration: none;
-    
    }
 
    blockquote:first-child:first-letter {
@@ -113,6 +109,11 @@
     font-weight: 400;
     letter-spacing: 0.031rem;
     text-align: left;
+   }
+
+   p:first-of-type {
+    margin-bottom: 32px;
+    text-indent: none;
    }
 
    p:first-of-type:first-letter {
