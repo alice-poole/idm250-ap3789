@@ -74,7 +74,7 @@
     font-size: 4.75rem;
     font-weight: 300;
     letter-spacing: -0.031rem;
-    text-align: center;
+    text-align: left;
    }
 
    h3 {
@@ -112,12 +112,12 @@
     text-align: left;
    }
 
-   p:nth-child(1) {
+   p:first-of-type {
     margin-bottom: 32px;
     text-indent: none;
    }
 
-   p:nth-child(1):first-letter {
+   p:first-of-type:first-letter {
     initial-letter: 2;
     letter-spacing: 0.031rem;
     text-transform: uppercase;
@@ -216,7 +216,7 @@
    }
 
    #menu-primary {
-    background-color: red;
+    list-style-type: none;
    }
 
    #menu-primary li {
