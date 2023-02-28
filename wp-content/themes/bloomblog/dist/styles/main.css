@@ -52,8 +52,11 @@
 
    blockquote {
     border: none;
-    padding: none;
+    font-style: italic;
+    margin-bottom: none;
+    margin-top: none;
     text-decoration: none;
+    
    }
 
    blockquote:first-child:first-letter {
@@ -67,7 +70,7 @@
     font-size: 7.625rem;
     font-weight: 300;
     letter-spacing: -0.094rem;
-    text-align: center;
+    text-align: left;
    }
 
    h2 {
@@ -110,6 +113,12 @@
     font-weight: 400;
     letter-spacing: 0.031rem;
     text-align: left;
+   }
+
+   p:first-of-type:first-letter {
+    initial-letter: 2;
+    letter-spacing: 0.031rem;
+    text-transform: uppercase;
    }
 
    strong {
