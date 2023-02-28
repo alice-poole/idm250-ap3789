@@ -12,6 +12,14 @@
     margin: 0;
     padding: 16px;
    }
+
+   .content-blocks > * + * {
+    margin-top: 1rem;
+   }
+
+   .content-blocks > h2 + p {
+    margin-top: 2rem;
+   }
   
    .content-blocks h1 {
     font-size: 2rem;

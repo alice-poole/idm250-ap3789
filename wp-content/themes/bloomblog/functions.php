@@ -71,3 +71,54 @@ function register_theme_menus()
     );
 }
 add_action('init', 'register_theme_menus');
+
+function register_custom_post_types()
+{
+    // Register Albums post type
+    register_post_type(
+        'albums',
+        [
+            'labels' => [
+                'name' => __('Albums'),
+                'singular_name' => __('Album')
+            ],
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'albums'],
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'show_in_rest' => true,
+        ]
+    );
+    // Register Albums post type
+    register_post_type(
+        'albums',
+        [
+            'labels' => [
+                'name' => __('Albums'),
+                'singular_name' => __('Album')
+            ],
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'albums'],
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'show_in_rest' => true,
+        ]
+    );
+    // Register Albums post type
+    register_post_type(
+        'stories',
+        [
+            'labels' => [
+                'name' => __('Stories'),
+                'singular_name' => __('story')
+            ],
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => ['slug' => 'stories'],
+            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'show_in_rest' => true,
+        ]
+    );
+}
+
+add_action('init', 'register_custom_post_types');
