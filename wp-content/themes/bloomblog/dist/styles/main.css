@@ -112,17 +112,6 @@
     text-align: left;
    }
 
-   p:first-of-type {
-    margin-bottom: 32px;
-    text-indent: none;
-   }
-
-   p:first-of-type:first-letter {
-    initial-letter: 2;
-    letter-spacing: 0.031rem;
-    text-transform: uppercase;
-   }
-
    strong {
     font-weight: 700;
    }
