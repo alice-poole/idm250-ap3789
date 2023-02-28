@@ -1,73 +1,132 @@
 * {
     box-sizing: border-box;
   }
+
+:root {
+    background-color: floralwhite;
+    font-family: 'Crimson Pro', serif;
+    line-height: 1.5;
+}
   
    body {
-    font-family: 'Crimson Pro', serif;
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+    align-items: center;
     color: black;
     background-color: floralwhite;
-    margin: 0;
-    padding: 16px;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 16px;
    }
 
    .content-blocks > * + * {
-    margin-top: 1rem;
+    margin-top: 1.25rem;
    }
 
-   .content-blocks > h2 + p {
+   /*.content-blocks > h2 + p {
     margin-top: 2rem;
-   }
+   }*/
   
    .content-blocks h1 {
-    font-size: 2rem;
-    font-weight: 700;
+    /**/
    }
-   h1 {
-    font-size: 2rem;
-    font-weight: 700;
-   }
-  
    .content-blocks h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
+    /**/
+   }
+   .content-blocks h3 {
+    /**/
+   }
+   .content-blocks h4 {
+    /**/
+   }
+   .content-blocks h5 {
+    /**/
+   }
+   .content-blocks h6 {
+    /**/
+   }
+   .content-blocks p {
+    /**/
+   }
+
+   .content-blocks pullquote {
+    /**/
+    color: red;
+   }
+
+   h1 {
+    font-size: 7.625rem;
+    font-weight: 300;
+    letter-spacing: -0.094rem;
+    text-align: center;
    }
 
    h2 {
-    font-size: 1.8rem;
-    font-weight: 700;
-   }
-
-   .content-blocks h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 4.75rem;
+    font-weight: 300;
+    letter-spacing: -0.031rem;
+    text-align: center;
    }
 
    h3 {
-    font-size: 1.375rem;
-    font-weight: 600;
-   }
-
-   .content-blocks h4 {
-    font-size: 1.375rem;
-    font-weight: 600;
+    font-size: 3.813rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
    }
 
    h4 {
-    font-size: 1.375rem;
-    font-weight: 600;
-   }
-
-   .content-blocks h5 {
-    font-size: 1rem;
-    font-weight: 600;
-   }
-
-   .content-blocks p {
-    font-size: 1rem;
+    font-size: 2.688rem;
     font-weight: 400;
+    letter-spacing: 0.016rem;
+    text-align: center;
+   }
+
+   h5 {
+    font-size: 1.938rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-align: center;
+   }
+
+   h6 {
+    font-size: 1.563rem;
+    font-weight: 500;
+    letter-spacing: 0.009rem;
+    text-align: center;
+   }
+
+   p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.031rem;
+    text-align: left;
+   }
+
+   .button {
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: 0.078rem;
+    text-align: center;
+   }
+
+   .caption {
+    font-size: 0.938rem;
+    font-weight: 400;
+    letter-spacing: 0.025rem;
+    text-align: center;
+   }
+
+   .overline {
+    font-size: 0.813rem;
+    font-weight: 400;
+    letter-spacing: 0.094rem;
+    text-transform: capitalize;
+    text-align: left;
+   }
+
+   ol.li, ul.li {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.031rem;
    }
 
    img.custom-logo {
@@ -136,6 +195,16 @@
         padding-left: 4rem;
     }
     body {
-        margin: 24px;
+        margin: 32px;
+    }
+   }
+
+   @media screen and (min-width: 905px) {
+    #menu-primary li.menu-item a {
+        padding-left: 4rem;
+    }
+    body {
+        margin: auto;
+        width: 840px;
     }
    }

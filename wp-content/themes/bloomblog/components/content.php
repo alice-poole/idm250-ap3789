@@ -1,5 +1,3 @@
-<h4>Hello test h4</h4>
-
 <div class="content-blocks">
   <?php
 if (have_posts()) {

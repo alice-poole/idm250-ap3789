@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-This is single.php
 <h1><?php echo get_the_title(); ?></h1>
 <h1><?php echo get_the_excerpt(); ?></h1>
 
