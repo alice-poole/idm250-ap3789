@@ -15,7 +15,7 @@
     background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');
     background-color: var(--background);
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
 }
 </style>
