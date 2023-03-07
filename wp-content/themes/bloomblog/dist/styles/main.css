@@ -2,17 +2,14 @@
     box-sizing: border-box;
   }
 
+  /*TODO: Cleanup code, eliminate redundancies*/
+
 :root {
     --background: FloralWhite;
     --text: Black;
+    --color: GoldenRod;
     font-family: 'Crimson Pro', serif;
     line-height: 1.5;
-    --color: GoldenRod;
-    --margin: 1.5rem;
-    --gutter: 1.5rem;
-    --columns: 4;
-    --narrow: 2;
-    --wide: 4;
 }
   
    body {
@@ -21,7 +18,7 @@
     display: flex;
     flex-flow: column nowrap;
     width: 100%;
-    min-height: 100vh;
+    font-size: 1em;
    }
 
    :root {
@@ -39,18 +36,32 @@
         --vspace-3: calc(0.5 * var(--space) * 1rem);
     }
     
-    html {font-size: 16px;}
-    
-    /*body {
+    html {font-size: 1rem;}
+
+    section {
+        width: 100%;
+        height: auto;
+        padding-bottom: var(--vspace-1);
+    }
+
+    .content {
         font-size: 1em;
-        max-width: calc(25 * var(--vspace));
+        width: calc(25 * var(--vspace));
+        max-width: calc(100% - var(--vspace-1));
         margin: 0 auto;
-    }*/
+        align-items: center;
+    }
+
+    .content > .narrow {
+        width: 50%;
+        margin: 0 auto;
+    }
     
     p {
-        margin: var(--vspace) 0; 
         line-height: var(--vspace);
     }
+
+
     
     h1 {
         margin: var(--vspace-1) 0 var(--vspace-1) 0;
@@ -145,7 +156,35 @@
         font-weight: normal;
     }
 
+    /*p, h1, h2, h3, h4, h5, h6 {
+        width: calc( (100% -  ((var(--columns)-1)*var(--gutter)) ) * --wide / --columns );
+    }*/
+
+    /*.bg {
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
+        z-index: -1000;
+        overflow: hidden;
+      }
+
+    .bg > img {
+        position: absolute;
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        margin: auto; 
+        min-width: 50%;
+        min-height: 50%;
+        height: auto;
+        width: auto;
+        overflow: hidden;
+    }*/
+
     .color {
+        --color: GoldenRod;
         color: var(--color);
     }
 
@@ -173,6 +212,7 @@
         border: .125rem solid var(--text);
         border-radius: .75rem;
         margin-bottom: 1.5rem;
+        padding: 1.5rem;
     }
 
     .content-background {
@@ -181,19 +221,13 @@
 
     .narrow { 
         display: border-box;
-        width: calc( (100% -  ((var(--columns)-1)*var(--gutter)) ) * --narrow / --columns );
-    };
-
-    .wide { 
-        display: border-box;
-        width: calc( (100% -  ((var(--columns)-1)*var(--gutter)) ) * --wide / --columns );
+        width: 50%;
     };
 
     header {
         display: border-box;
         width: 100%;
         height: 3rem;
-        background-color: red;
     }
 
     /**/
@@ -242,7 +276,6 @@
    }
 
    a {
-    color: var(--color);
     font-weight: 700;
     text-decoration: none;
    }
@@ -263,8 +296,12 @@
     text-align: center;
    }
 
+   .full {
+    min-height: 100vh;
+   }
+
    img.custom-logo {
-    height: 24px;
+    height: 1.5rem;
     width: auto;
    }
 
@@ -280,11 +317,15 @@
     text-decoration: none;
    }
 
+   nav {
+    padding-left: 1rem;
+   }
+
    .nav-inside {
     align-items: center;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
    }
 
    .nav-outside {
@@ -327,7 +368,7 @@
    }
 
    footer #menu-primary li.menu-item a {
-    color: red;
+    color: GoldenRod;
    }
 
    .outline {
@@ -344,25 +385,11 @@
     border-radius: 100% 100% .75rem .75rem;
    }
 
-   section {
-    width: 80%;
-   }
-
    @media screen and (min-width: 600px) {
     #menu-primary li.menu-item a {
         padding-left: 4rem;
     }
-    :root {
-        --columns: 8;
-        --narrow: 2;
-        --wide: 6;
-    }
    }
 
    @media screen and (min-width: 905px) {
-    :root {
-        --columns: 12;
-        --narrow: 4;
-        --wide: 6;
-    }
    }

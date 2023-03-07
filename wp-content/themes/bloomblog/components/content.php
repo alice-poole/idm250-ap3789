@@ -1,4 +1,6 @@
-<div class="content-blocks">
+<section>
+  <div class="content">
+  <div class="content-blocks">
   <?php
 if (have_posts()) {
     // Load posts loop.
@@ -11,3 +13,5 @@ if (have_posts()) {
 }
   ?>
 </div>
+  </div>
+</section>

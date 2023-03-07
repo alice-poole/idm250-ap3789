@@ -10,15 +10,16 @@
   <?php wp_head(); ?>
 </head>
 
-<body class = "background-image" <?php body_class(); ?>>
+<body <?php body_class(); ?>>
   <?php
   // @link https://developer.wordpress.org/reference/functions/wp_body_open/
   // Fires the wp_body_open action.
   wp_body_open();
   ?>
   <?php get_template_part('components/visuals'); ?>
-  <section>
-        <header>
-            <nav class="nav-outside">
-            </nav>
-        </header>
+  <section class="background-image full">
+    <header>
+        <nav class="nav-outside">
+            <p>Test</p>
+        </nav>
+    </header>

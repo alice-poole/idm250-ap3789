@@ -3,7 +3,12 @@
 // 2. get_theme_menu() which is a custom function I made to get the menu items. It exist in our functions.php file. You can then loop through it and write your own markup
 $menu = get_theme_menu('primary-menu');
 ?>
-<h3>Table of Contents</h3>
-<?php foreach ($menu as $item) {
-          echo "<a href='{$item->url}'>{$item->title}</a><br>";
+<section>
+  <div class="content">
+  <h3>Table of Contents</h3><br>
+  <?php foreach ($menu as $item) {
+          echo "<a class = 'list' href='{$item->url}'><h4>{$item->title}</h4></a>";
       }  ?>
+  </div>
+</section>
+

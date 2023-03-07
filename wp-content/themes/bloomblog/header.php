@@ -16,30 +16,10 @@
   // Fires the wp_body_open action.
   wp_body_open();
   ?>
-  <p>Header</p>
   <?php get_template_part('components/visuals'); ?>
   <section>
     <header>
-      <nav class="nav-inside">
-      </nav>
+        <nav class="nav-inside">
+            <a href='<?php echo home_url();?>'><h5><?php echo get_bloginfo('name'); ?></h5></a>
+        </nav>
     </header>
-  
-  <?php /*the_custom_logo();?>  
-    <div class="logo">
-    <a href="<?php echo site_url();?>">
-        <?php the_custom_logo();?>  
-        
-    </a>
-    </div>
-    <div class="menubar">
-    <?php wp_nav_menu(['theme_location' => 'primary-menu']); ?>
-    <!--a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-    </a-->
-</nav>
-</div>
-
-<div class="parent">
-<div class="div1"> </div>
-</div>
-*/?>
