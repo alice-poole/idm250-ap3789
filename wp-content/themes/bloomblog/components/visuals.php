@@ -3,7 +3,7 @@
     --color: ?php the_field('color'); ?>;
 }*/
 .background-image {
-    background-image: url(<?php bloginfo('template_directory'); ?> /dist/images/background.jpg);
+    background-image: url('<?php bloginfo('template_directory'); ?> /dist/images/background.jpg');
     z-index: -1000;
     background-size: cover;
     background-color: var(--background);
