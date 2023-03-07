@@ -1,3 +1,10 @@
+<!--
+    What is this?
+    To practice with unique post types and styles, this will be a silly additional section available as a stretch goal after Week 9 fixing/polishing/final steps.
+    These will be short, tweet-like sentences each formatted in full-screen pages meant to resemble ornate books or classical manuscripts.
+    Twits will hopefully be available as a format for quick private microblogging, in contrast to the book-like longform Posts.
+-->
+
 <?php get_header(); ?>
 
 <h1><?php echo get_the_title(); ?></h1>
@@ -6,6 +13,8 @@
 <?php get_template_part('components/content'); ?>
 
 <?php get_footer(); ?>
+
+
 
 <!--show categories
 <DELETETHIS?php
