@@ -295,6 +295,12 @@
     text-align: center;
    }
 
+   .wp-block-embed {
+    border: .125rem solid var(--text);
+    border-radius: 12px;
+    width: 100%;
+   }
+
    .full {
     min-height: 100vh;
    }
