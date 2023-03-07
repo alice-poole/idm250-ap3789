@@ -12,7 +12,7 @@
 }
 
 .featured-image {
-    background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');
+    background-image: url('https://feybloom.com/idm250/wp-content/uploads/2023/03/background.jpg');
     background-color: var(--background);
     background-size: cover;
     width: auto;
