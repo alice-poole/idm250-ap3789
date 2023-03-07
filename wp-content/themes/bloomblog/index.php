@@ -1,4 +1,4 @@
-<?php
+<?php 
 /**
  * The main template file
  *
@@ -7,6 +7,9 @@
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
  **/
-get_header(); ?>
+      get_header(); ?>
+
+<?php get_template_part('components/hero/page'); ?>
 <?php get_template_part('components/content'); ?>
+
 <?php get_footer(); ?>

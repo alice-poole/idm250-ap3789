@@ -16,10 +16,18 @@
   // Fires the wp_body_open action.
   wp_body_open();
   ?>
-  <nav>
+  <p>Header</p>
+  <?php get_template_part('components/visuals'); ?>
+  <section>
+    <header>
+      <nav class="nav-inside">
+      </nav>
+    </header>
+  
+  <?php /*the_custom_logo();?>  
     <div class="logo">
-    <a href="<?php home_url();?>">
-        <?php the_custom_logo();?>
+    <a href="<?php echo site_url();?>">
+        <?php the_custom_logo();?>  
         
     </a>
     </div>
@@ -30,3 +38,8 @@
     </a-->
 </nav>
 </div>
+
+<div class="parent">
+<div class="div1"> </div>
+</div>
+*/?>

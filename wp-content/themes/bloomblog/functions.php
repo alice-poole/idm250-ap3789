@@ -52,6 +52,8 @@ add_action('wp_enqueue_scripts', 'theme_scripts_and_styles');
 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 */
 add_theme_support('post-thumbnails');
+
+//Add custom logo support to pages
 add_theme_support('custom-logo');
 
 // Add excerpt support to pages
@@ -72,6 +74,25 @@ function register_theme_menus()
 }
 add_action('init', 'register_theme_menus');
 
+/**
+ * Get menu items as a flat array to use for custom markup
+ * @link https://developer.wordpress.org/reference/functions/wp_nav_menu/
+ * @param string $menu_name - Name of the registered menu id
+ * @return array $menu_items - Array of WP_Post objects.
+ */
+function get_theme_menu($menu_name)
+{
+    // Get menu items as a flat array
+    $locations = get_nav_menu_locations();
+    // If menu doesn't exist, let's just return an empty array
+    if (!isset($locations[$menu_name])) {
+        return [];
+    }
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id, ['order' => 'DESC']);
+    return $menu_items;
+}
+
 function register_custom_post_types()
 {
     // Register Albums post type
@@ -79,17 +100,18 @@ function register_custom_post_types()
         'albums',
         [
             'labels' => [
-                'name' => __('Albums'),
-                'singular_name' => __('Album')
+                'name' => __('Twits'),
+                'singular_name' => __('Twit')
             ],
             'public' => true,
             'has_archive' => true,
-            'rewrite' => ['slug' => 'albums'],
-            'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
+            'rewrite' => ['slug' => 'twits'],
+            'supports' => ['title', 'editor', 'thumbnail'],
+            'menu_position' => 5,
             'show_in_rest' => true,
         ]
     );
-    // Register Albums post type
+    /* Register Albums post type
     register_post_type(
         'albums',
         [
@@ -106,19 +128,20 @@ function register_custom_post_types()
     );
     // Register Albums post type
     register_post_type(
-        'stories',
+        'twits',
         [
             'labels' => [
-                'name' => __('Stories'),
-                'singular_name' => __('story')
+                'name' => __('Twits'),
+                'singular_name' => __('twit')
             ],
             'public' => true,
             'has_archive' => true,
-            'rewrite' => ['slug' => 'stories'],
+            'rewrite' => ['slug' => 'twits'],
             'supports' => ['title', 'editor', 'thumbnail', 'excerpt'],
             'show_in_rest' => true,
         ]
-    );
+    );*/
 }
 
 add_action('init', 'register_custom_post_types');
+?>
