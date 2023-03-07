@@ -295,7 +295,7 @@
     text-align: center;
    }
 
-   .wp-block-embed {
+   embed {
     border: .125rem solid var(--text);
     border-radius: 12px;
     width: 100%;
