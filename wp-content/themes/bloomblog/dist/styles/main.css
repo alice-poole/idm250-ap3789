@@ -63,7 +63,7 @@
         word-break: break-word;
         text-align: center;
         line-height: 3.75rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
     }
     
     .title, h2 {
@@ -227,9 +227,6 @@
     }
 
     /**/
-
-   .content-blocks {
-   }
 
    /*.content-blocks > h2 + p {
     margin-top: 2rem;
