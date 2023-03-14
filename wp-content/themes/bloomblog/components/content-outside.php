@@ -1,4 +1,4 @@
-<section>
+
   <div class="content">
     <div class="content-blocks">
       <?php

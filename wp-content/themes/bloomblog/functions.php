@@ -22,7 +22,7 @@ function theme_scripts_and_styles()
     // Load in Google Fonts
     wp_enqueue_style(
         'google-fonts',
-        'https://fonts.googleapis.com/css?family=Crimson+Pro:300,400,500,700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;700&family=UnifrakturCook:wght@700&display=swap',
         [],
         null
     );
@@ -144,4 +144,22 @@ function register_custom_post_types()
 }
 
 add_action('init', 'register_custom_post_types');
+
+function remove_archive_title_prefix($title)
+{
+    if (is_category()) {
+        $title = single_cat_title('', false);
+    } elseif (is_tag()) {
+        $title = single_tag_title('', false);
+    } elseif (is_author()) {
+        $title = '<span class="vcard">' . get_the_author() . '</span>';
+    } elseif (is_post_type_archive()) {
+        $title = post_type_archive_title('', false);
+    } elseif (is_tax()) {
+        $title = single_term_title('', false);
+    }
+    return $title;
+}
+add_filter('get_the_archive_title', 'remove_archive_title_prefix');
+
 ?>
