@@ -303,14 +303,12 @@
     border: .125rem solid var(--text);
     border-radius: 12px;
     width: 100%;
-    margin-bottom: 1.5rem;
    }
    figcaption {
     font-size: 0.938rem;
     font-weight: 400;
     letter-spacing: 0.025rem;
     text-align: center;
-    margin-bottom: 1.5rem;
    }
 
    embed {

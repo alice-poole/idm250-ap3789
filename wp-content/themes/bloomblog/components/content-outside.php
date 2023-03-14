@@ -1,6 +1,6 @@
 
   <div class="content">
-    <div class="content-blocks">
+    <div class="content-blocks content-outside">
       <?php
         if (have_posts()) {
           // Load posts loop.
