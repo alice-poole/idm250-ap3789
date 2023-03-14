@@ -408,7 +408,7 @@
     border-radius: .75rem;
    }
 
-   .wp-has-aspect-ratio {
+   iframe {
     border-radius: .75rem;
     border: .125rem solid var(--text);
     width: 100%;
