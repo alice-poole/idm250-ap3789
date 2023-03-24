@@ -6,7 +6,6 @@
         </div>
         <div>
             <h1><?php echo get_the_title(); ?></h1>
-            <!--<h4>Categories or custom subtitle? - TODO: Replace with Custom Field</h4>-->
         </div>
         <p><?php echo get_the_excerpt(); ?></p>
     </div>
