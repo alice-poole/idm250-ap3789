@@ -20,6 +20,8 @@
   <section class="background-image full">
     <header>
         <nav class="nav-outside">
-            <?php echo get_custom_logo(); ?>
+            <a href='<?php echo home_url();?>'>
+              <?php echo get_custom_logo(); ?>
+            </a> 
         </nav>
     </header>
